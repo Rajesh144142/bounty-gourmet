@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LogoMart | Modern Grocery Store</title>
+  <title>Bounty | Premium Gourmet Grocery</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
@@ -14,7 +14,24 @@
 <body>
   <header class="site-header">
     <div class="header-main">
-      <a href="#home" class="brand" aria-label="LogoMart home">LogoMart<span>.</span></a>
+      <a href="#home" class="brand" aria-label="Bounty home">Bounty<span>.</span></a>
+      
+      <nav class="topnav" id="myTopnav" aria-label="Main navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn" type="button">Categories <i class="bx bx-chevron-down"></i></button>
+          <div class="dropdown-content">
+            <a href="#fruits">Fruits</a>
+            <a href="#vegetables">Vegetables</a>
+            <a href="#protein">Fish & Meat</a>
+            <a href="#beverages">Beverages</a>
+            <a href="#beverages">Snacks</a>
+          </div>
+        </div>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
       <div class="header-actions">
         <label class="search-box" for="product-search">
           <i class="bx bx-search"></i>
@@ -27,7 +44,7 @@
           <i class="bx bx-shopping-bag"></i>
           <span class="cart-count">0</span>
         </button>
-        <button class="icon-button user-button" type="button" onclick="document.getElementById('id01').style.display='block'" aria-label="Open account">
+        <button class="icon-button user-button" type="button" id="open-login-btn" aria-label="Open account">
           <i class="bx bx-user"></i>
         </button>
         <button class="icon-button menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
@@ -35,92 +52,77 @@
         </button>
       </div>
     </div>
-
-    <nav class="topnav" id="myTopnav" aria-label="Main navigation">
-      <a href="#home" class="nav-link active">Home</a>
-      <div class="dropdown">
-        <button class="dropbtn" type="button">Categories <i class="bx bx-chevron-down"></i></button>
-        <div class="dropdown-content">
-          <a href="#fruits">Fruits</a>
-          <a href="#vegetables">Vegetables</a>
-          <a href="#protein">Fish & Meat</a>
-          <a href="#beverages">Beverages</a>
-          <a href="#beverages">Snacks</a>
-        </div>
-      </div>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-    </nav>
   </header>
 
   <main>
     <section class="slide" id="home">
       <div class="slideshow-container">
-        <div class="mySlides fade"><img src="photo/one.jpg" alt="Fresh groceries"></div>
-        <div class="mySlides fade"><img src="photo/two.jpg" alt="Quality products"></div>
-        <div class="mySlides fade"><img src="photo/three.jpg" alt="Shop online"></div>
-      </div>
-    </section>
-
-    <section class="quick" aria-label="Quick search">
-      <div class="quick-search">
-        <span class="quick-label">Quick search</span>
-        <a href="#fruits" class="quick-chip">Apples</a>
-        <a href="#beverages" class="quick-chip">Chocolates</a>
-        <a href="#beverages" class="quick-chip">Noodles</a>
-        <a href="#beverages" class="quick-chip">Beverages</a>
+        <div class="mySlides fade"><img src="photo/hero_slide_1.jpg" alt="Fresh groceries"></div>
+        <div class="mySlides fade"><img src="photo/hero_slide_2.jpg" alt="Quality products"></div>
+        <div class="mySlides fade"><img src="photo/hero_slide_3.jpg" alt="Shop online"></div>
       </div>
     </section>
 
     <section class="products-section" aria-labelledby="products-heading">
       <div class="section-heading">
-        <p>Fresh selections</p>
         <h1 id="products-heading">Our Products</h1>
+        <div class="category-tabs-container">
+          <button type="button" class="category-tab active" data-target="#fruits">
+            <i class="bx bxs-leaf"></i>
+            <span>Fruits</span>
+          </button>
+          <button type="button" class="category-tab" data-target="#vegetables">
+            <i class="bx bx-spa"></i>
+            <span>Vegetables</span>
+          </button>
+          <button type="button" class="category-tab" data-target="#protein">
+            <i class="bx bxs-fish"></i>
+            <span>Fish & Meat</span>
+          </button>
+          <button type="button" class="category-tab" data-target="#beverages">
+            <i class="bx bxs-drink"></i>
+            <span>Beverages & Snacks</span>
+          </button>
+        </div>
       </div>
 
       <section class="product-category" id="fruits">
-        <div class="category-heading"><h2>Fresh Fruits</h2><div class="category-actions"><button type="button" class="prev1" onclick="prev1()" aria-label="Previous fruits"><i class="bx bx-left-arrow-alt"></i></button><button type="button" class="next1" onclick="next1()" aria-label="Next fruits"><i class="bx bx-right-arrow-alt"></i></button></div></div>
+        <div class="category-heading"><h2>Fresh Fruits</h2><div class="category-actions"><button type="button" class="prev-btn" aria-label="Previous fruits"><i class="bx bx-left-arrow-alt"></i></button><button type="button" class="next-btn" aria-label="Next fruits"><i class="bx bx-right-arrow-alt"></i></button></div></div>
         <div class="product-grid shop-content1" id="shop-content1">
-          <article class="product-box"><img src="photo/orange.jpg" alt="Oranges" class="product-img"><h3 class="product-title">Oranges</h3><span class="price">₹50</span><button class="add-cart" type="button" aria-label="Add Oranges to cart"><i class="bx bx-plus"></i></button></article>
-          <article class="product-box"><img src="photo/apple.jpg" alt="Apples" class="product-img"><h3 class="product-title">Apples</h3><span class="price">₹50</span><button class="add-cart" type="button" aria-label="Add Apples to cart"><i class="bx bx-plus"></i></button></article>
-          <article class="product-box"><img src="photo/banana.jpg" alt="Bananas" class="product-img"><h3 class="product-title">Bananas</h3><span class="price">₹30</span><button class="add-cart" type="button" aria-label="Add Bananas to cart"><i class="bx bx-plus"></i></button></article>
-          <article class="product-box"><img src="photo/mango.jpg" alt="Mangoes" class="product-img"><h3 class="product-title">Mangoes</h3><span class="price">₹40</span><button class="add-cart" type="button" aria-label="Add Mangoes to cart"><i class="bx bx-plus"></i></button></article>
-          <article class="product-box"><img src="photo/graps.jpg" alt="Grapes" class="product-img"><h3 class="product-title">Grapes</h3><span class="price">₹90</span><button class="add-cart" type="button" aria-label="Add Grapes to cart"><i class="bx bx-plus"></i></button></article>
-          <article class="product-box"><img src="photo/goava.jpg" alt="Guavas" class="product-img"><h3 class="product-title">Guavas</h3><span class="price">₹20</span><button class="add-cart" type="button" aria-label="Add Guavas to cart"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><span class="product-badge">Organic</span><img src="photo/fruit_orange.jpg" alt="Oranges" class="product-img"><h3 class="product-title">Oranges</h3><p class="product-desc">Sweet and juicy organic oranges, rich in Vitamin C.</p><div class="product-rating"><i class="bx bxs-star"></i><span>4.8</span><span class="rating-count">(85)</span></div><div class="product-footer"><div class="price-details-container"><span class="price">₹50</span><span class="view-details-link">View Details <i class="bx bx-chevron-right"></i></span></div><button class="add-cart" type="button" aria-label="Add Oranges to cart"><i class="bx bx-plus"></i></button></div></article>
+          <article class="product-box"><span class="product-badge">Organic</span><img src="photo/fruit_apple.jpg" alt="Apples" class="product-img"><h3 class="product-title">Apples</h3><p class="product-desc">Crisp and sweet organic red apples sourced locally.</p><div class="product-rating"><i class="bx bxs-star"></i><span>4.9</span><span class="rating-count">(142)</span></div><div class="product-footer"><div class="price-details-container"><span class="price">₹50</span><span class="view-details-link">View Details <i class="bx bx-chevron-right"></i></span></div><button class="add-cart" type="button" aria-label="Add Apples to cart"><i class="bx bx-plus"></i></button></div></article>
+          <article class="product-box"><span class="product-badge">Organic</span><img src="photo/fruit_banana.jpg" alt="Bananas" class="product-img"><h3 class="product-title">Bananas</h3><p class="product-desc">Rich in potassium, ripe and energizing bananas.</p><div class="product-rating"><i class="bx bxs-star"></i><span>4.7</span><span class="rating-count">(96)</span></div><div class="product-footer"><div class="price-details-container"><span class="price">₹30</span><span class="view-details-link">View Details <i class="bx bx-chevron-right"></i></span></div><button class="add-cart" type="button" aria-label="Add Bananas to cart"><i class="bx bx-plus"></i></button></div></article>
+          <article class="product-box"><span class="product-badge">Organic</span><img src="photo/fruit_mango.jpg" alt="Mangoes" class="product-img"><h3 class="product-title">Mangoes</h3><p class="product-desc">Premium gourmet Alphonso mangoes, sweet and rich.</p><div class="product-rating"><i class="bx bxs-star"></i><span>4.9</span><span class="rating-count">(210)</span></div><div class="product-footer"><div class="price-details-container"><span class="price">₹40</span><span class="view-details-link">View Details <i class="bx bx-chevron-right"></i></span></div><button class="add-cart" type="button" aria-label="Add Mangoes to cart"><i class="bx bx-plus"></i></button></div></article>
         </div>
       </section>
 
       <section class="product-category" id="vegetables">
-        <div class="category-heading"><h2>Fresh Vegetables</h2><div class="category-actions"><button type="button" class="prev2" onclick="prev2()"><i class="bx bx-left-arrow-alt"></i></button><button type="button" class="next2" onclick="next2()"><i class="bx bx-right-arrow-alt"></i></button></div></div>
+        <div class="category-heading"><h2>Fresh Vegetables</h2><div class="category-actions"><button type="button" class="prev-btn" aria-label="Previous vegetables"><i class="bx bx-left-arrow-alt"></i></button><button type="button" class="next-btn" aria-label="Next vegetables"><i class="bx bx-right-arrow-alt"></i></button></div></div>
         <div class="product-grid shop-content2" id="shop-content2">
-          <article class="product-box"><img src="photo/carrot.jpg" alt="Carrots" class="product-img"><h3 class="product-title">Carrots</h3><span class="price">₹5</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
-          <article class="product-box"><img src="photo/potato.jpg" alt="Potato" class="product-img"><h3 class="product-title">Potato</h3><span class="price">₹10</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
-          <article class="product-box"><img src="photo/garlic.jpg" alt="Garlic" class="product-img"><h3 class="product-title">Garlic</h3><span class="price">₹30</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
-          <article class="product-box"><img src="photo/onion.jpg" alt="Onions" class="product-img"><h3 class="product-title">Onions</h3><span class="price">₹75</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
-          <article class="product-box"><img src="photo/ginger.jpg" alt="Ginger" class="product-img"><h3 class="product-title">Ginger</h3><span class="price">₹50</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
-          <article class="product-box"><img src="photo/tomato.jpg" alt="Tomatoes" class="product-img"><h3 class="product-title">Tomatoes</h3><span class="price">₹20</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><span class="product-badge">Organic</span><img src="photo/veg_carrot.jpg" alt="Carrots" class="product-img"><h3 class="product-title">Carrots</h3><p class="product-desc">Crunchy and sweet carrots, perfect for juicing or salads.</p><div class="product-rating"><i class="bx bxs-star"></i><span>4.6</span><span class="rating-count">(73)</span></div><div class="product-footer"><div class="price-details-container"><span class="price">₹5</span><span class="view-details-link">View Details <i class="bx bx-chevron-right"></i></span></div><button class="add-cart" type="button" aria-label="Add Carrots to cart"><i class="bx bx-plus"></i></button></div></article>
+          <article class="product-box"><span class="product-badge">Organic</span><img src="photo/veg_potato.jpg" alt="Potato" class="product-img"><h3 class="product-title">Potato</h3><p class="product-desc">Fresh starchy potatoes, perfect for daily recipes.</p><div class="product-rating"><i class="bx bxs-star"></i><span>4.5</span><span class="rating-count">(112)</span></div><div class="product-footer"><div class="price-details-container"><span class="price">₹10</span><span class="view-details-link">View Details <i class="bx bx-chevron-right"></i></span></div><button class="add-cart" type="button" aria-label="Add Potato to cart"><i class="bx bx-plus"></i></button></div></article>
+          <article class="product-box"><span class="product-badge">Organic</span><img src="photo/veg_garlic.jpg" alt="Garlic" class="product-img"><h3 class="product-title">Garlic</h3><p class="product-desc">Aromatic natural garlic bulbs, fresh from local farms.</p><div class="product-rating"><i class="bx bxs-star"></i><span>4.8</span><span class="rating-count">(64)</span></div><div class="product-footer"><div class="price-details-container"><span class="price">₹30</span><span class="view-details-link">View Details <i class="bx bx-chevron-right"></i></span></div><button class="add-cart" type="button" aria-label="Add Garlic to cart"><i class="bx bx-plus"></i></button></div></article>
+          <article class="product-box"><span class="product-badge">Organic</span><img src="photo/veg_onion.jpg" alt="Onions" class="product-img"><h3 class="product-title">Onions</h3><p class="product-desc">Crisp, sweet, and flavorful red onions for seasoning.</p><div class="product-rating"><i class="bx bxs-star"></i><span>4.7</span><span class="rating-count">(95)</span></div><div class="product-footer"><div class="price-details-container"><span class="price">₹75</span><span class="view-details-link">View Details <i class="bx bx-chevron-right"></i></span></div><button class="add-cart" type="button" aria-label="Add Onions to cart"><i class="bx bx-plus"></i></button></div></article>
         </div>
       </section>
 
       <section class="product-category" id="protein">
-        <div class="category-heading"><h2>Fish, Meat & Dairy</h2><div class="category-actions"><button type="button" class="prev3" onclick="prev3()"><i class="bx bx-left-arrow-alt"></i></button><button type="button" class="next3" onclick="next3()"><i class="bx bx-right-arrow-alt"></i></button></div></div>
+        <div class="category-heading"><h2>Fish, Meat & Dairy</h2><div class="category-actions"><button type="button" class="prev-btn" aria-label="Previous protein"><i class="bx bx-left-arrow-alt"></i></button><button type="button" class="next-btn" aria-label="Next protein"><i class="bx bx-right-arrow-alt"></i></button></div></div>
         <div class="product-grid shop-content3" id="shop-content3">
-          <article class="product-box"><img src="photo/katla.jpg" alt="Katla" class="product-img"><h3 class="product-title">Katla</h3><span class="price">₹105</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
-          <article class="product-box"><img src="photo/Hilsa.jpg" alt="Hilsha" class="product-img"><h3 class="product-title">Hilsha</h3><span class="price">₹1000</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
-          <article class="product-box"><img src="photo/shrimp.jpg" alt="Shrimp" class="product-img"><h3 class="product-title">Shrimp</h3><span class="price">₹95</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
-          <article class="product-box"><img src="photo/rui-mach.jpg" alt="Rohu" class="product-img"><h3 class="product-title">Rohu</h3><span class="price">₹100</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
-          <article class="product-box"><img src="photo/goat-meat.jpg" alt="Goat meat" class="product-img"><h3 class="product-title">Goat Meat</h3><span class="price">₹550</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
-          <article class="product-box"><img src="photo/fresh-chicken-meat.jpg" alt="Chicken" class="product-img"><h3 class="product-title">Chicken</h3><span class="price">₹250</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><span class="product-badge">Fresh</span><img src="photo/meat_katla.jpg" alt="Katla" class="product-img"><h3 class="product-title">Katla</h3><p class="product-desc">Freshly caught local Katla fish, rich in calcium.</p><div class="product-rating"><i class="bx bxs-star"></i><span>4.7</span><span class="rating-count">(104)</span></div><div class="product-footer"><div class="price-details-container"><span class="price">₹105</span><span class="view-details-link">View Details <i class="bx bx-chevron-right"></i></span></div><button class="add-cart" type="button" aria-label="Add Katla to cart"><i class="bx bx-plus"></i></button></div></article>
+          <article class="product-box"><span class="product-badge">Fresh</span><img src="photo/meat_hilsa.jpg" alt="Hilsha" class="product-img"><h3 class="product-title">Hilsha</h3><p class="product-desc">Premium silver Hilsa fish, highly sought after for its oils.</p><div class="product-rating"><i class="bx bxs-star"></i><span>4.9</span><span class="rating-count">(340)</span></div><div class="product-footer"><div class="price-details-container"><span class="price">₹1000</span><span class="view-details-link">View Details <i class="bx bx-chevron-right"></i></span></div><button class="add-cart" type="button" aria-label="Add Hilsha to cart"><i class="bx bx-plus"></i></button></div></article>
+          <article class="product-box"><span class="product-badge">Fresh</span><img src="photo/meat_shrimp.jpg" alt="Shrimp" class="product-img"><h3 class="product-title">Shrimp</h3><p class="product-desc">Tender and sweet local river prawns, rich in protein.</p><div class="product-rating"><i class="bx bxs-star"></i><span>4.8</span><span class="rating-count">(128)</span></div><div class="product-footer"><div class="price-details-container"><span class="price">₹95</span><span class="view-details-link">View Details <i class="bx bx-chevron-right"></i></span></div><button class="add-cart" type="button" aria-label="Add Shrimp to cart"><i class="bx bx-plus"></i></button></div></article>
+          <article class="product-box"><span class="product-badge">Fresh</span><img src="photo/meat_rohu.jpg" alt="Rohu" class="product-img"><h3 class="product-title">Rohu</h3><p class="product-desc">Fresh river-caught Rohu fish, popular for light curries.</p><div class="product-rating"><i class="bx bxs-star"></i><span>4.6</span><span class="rating-count">(92)</span></div><div class="product-footer"><div class="price-details-container"><span class="price">₹100</span><span class="view-details-link">View Details <i class="bx bx-chevron-right"></i></span></div><button class="add-cart" type="button" aria-label="Add Rohu to cart"><i class="bx bx-plus"></i></button></div></article>
         </div>
       </section>
 
       <section class="product-category" id="beverages">
-        <div class="category-heading"><h2>Beverages & Snacks</h2><div class="category-actions"><button type="button" class="prev4" onclick="prev4()"><i class="bx bx-left-arrow-alt"></i></button><button type="button" class="next4" onclick="next4()"><i class="bx bx-right-arrow-alt"></i></button></div></div>
+        <div class="category-heading"><h2>Beverages & Snacks</h2><div class="category-actions"><button type="button" class="prev-btn" aria-label="Previous beverages"><i class="bx bx-left-arrow-alt"></i></button><button type="button" class="next-btn" aria-label="Next beverages"><i class="bx bx-right-arrow-alt"></i></button></div></div>
         <div class="product-grid shop-content4" id="shop-content4">
-          <article class="product-box"><img src="photo/coc.jpg" alt="Coca Cola" class="product-img"><h3 class="product-title">Coca Cola</h3><span class="price">₹40</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
-          <article class="product-box"><img src="photo/limca.jpg" alt="Limca" class="product-img"><h3 class="product-title">Limca</h3><span class="price">₹30</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
-          <article class="product-box"><img src="photo/pepsi.jpg" alt="Pepsi" class="product-img"><h3 class="product-title">Pepsi</h3><span class="price">₹40</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
-          <article class="product-box"><img src="photo/maggi.jpg" alt="Noodles" class="product-img"><h3 class="product-title">Noodles</h3><span class="price">₹30</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><span class="product-badge">Premium</span><img src="photo/bev_coke.jpg" alt="Coca Cola" class="product-img"><h3 class="product-title">Coca Cola</h3><p class="product-desc">Chilled refreshing carbonated classic sweet cola beverage.</p><div class="product-rating"><i class="bx bxs-star"></i><span>4.4</span><span class="rating-count">(150)</span></div><div class="product-footer"><div class="price-details-container"><span class="price">₹40</span><span class="view-details-link">View Details <i class="bx bx-chevron-right"></i></span></div><button class="add-cart" type="button" aria-label="Add Coca Cola to cart"><i class="bx bx-plus"></i></button></div></article>
+          <article class="product-box"><span class="product-badge">Premium</span><img src="photo/bev_lays.jpg" alt="Lays Chips" class="product-img"><h3 class="product-title">Lays Chips</h3><p class="product-desc">Crisp and classic salted potato chips, perfect for snacking.</p><div class="product-rating"><i class="bx bxs-star"></i><span>4.8</span><span class="rating-count">(188)</span></div><div class="product-footer"><div class="price-details-container"><span class="price">₹20</span><span class="view-details-link">View Details <i class="bx bx-chevron-right"></i></span></div><button class="add-cart" type="button" aria-label="Add Lays Chips to cart"><i class="bx bx-plus"></i></button></div></article>
+          <article class="product-box"><span class="product-badge">Premium</span><img src="photo/bev_kurkure.jpg" alt="Kurkure" class="product-img"><h3 class="product-title">Kurkure</h3><p class="product-desc">Crunchy and spicy puff snacks, made from rice and corn.</p><div class="product-rating"><i class="bx bxs-star"></i><span>4.7</span><span class="rating-count">(142)</span></div><div class="product-footer"><div class="price-details-container"><span class="price">₹20</span><span class="view-details-link">View Details <i class="bx bx-chevron-right"></i></span></div><button class="add-cart" type="button" aria-label="Add Kurkure to cart"><i class="bx bx-plus"></i></button></div></article>
+          <article class="product-box"><span class="product-badge">Premium</span><img src="photo/bev_noodles.jpg" alt="Noodles" class="product-img"><h3 class="product-title">Noodles</h3><p class="product-desc">Instant hot noodles packaged with a delicious seasoning packet.</p><div class="product-rating"><i class="bx bxs-star"></i><span>4.8</span><span class="rating-count">(280)</span></div><div class="product-footer"><div class="price-details-container"><span class="price">₹30</span><span class="view-details-link">View Details <i class="bx bx-chevron-right"></i></span></div><button class="add-cart" type="button" aria-label="Add Noodles to cart"><i class="bx bx-plus"></i></button></div></article>
         </div>
       </section>
     </section>
@@ -133,17 +135,183 @@
     <button type="button" class="btn-buyp">Checkout</button>
   </aside>
 
-  <section class="reviews" id="reviews"><h2>Customer Reviews</h2><p>Quality products, delivered with care.</p></section>
-  <footer id="contact"><strong>LogoMart.</strong><span>Fresh products. Simple shopping.</span></footer>
+  <section class="reviews" id="reviews">
+    <h2>Customer Reviews</h2>
+    <p class="reviews-subtitle">What our gourmet community says about Bounty</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+        </div>
+        <p class="review-text">"Bounty has completely redefined my grocery shopping. The fresh katla and prime goat meat are of restaurant-grade quality. Delivery is always prompt and beautifully packaged."</p>
+        <div class="review-author">
+          <img src="photo/review_avatar_1.jpg" alt="Aria Vance" class="review-avatar">
+          <div class="review-info">
+            <h4>Aria Vance</h4>
+            <span>Executive Chef</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+        </div>
+        <p class="review-text">"I love their selection of organic local fruits and greens. The mangoes and grapes are sweet, firm, and taste like they were plucked this morning. The dark mode theme is super sleek too!"</p>
+        <div class="review-author">
+          <img src="photo/review_avatar_2.jpg" alt="Marcus Sterling" class="review-avatar">
+          <div class="review-info">
+            <h4>Marcus Sterling</h4>
+            <span>Nutrition Specialist</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+        </div>
+        <p class="review-text">"Finding premium beverages and quality local ingredients in one clean interface used to be impossible. The single-page flow makes ordering dinner supplies take less than three minutes."</p>
+        <div class="review-author">
+          <img src="photo/review_avatar_3.jpg" alt="Elena Rostova" class="review-avatar">
+          <div class="review-info">
+            <h4>Elena Rostova</h4>
+            <span>Food Blogger</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div id="id01" class="modal">
+  <section class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+    <p class="contact-subtitle">Get in touch with Bounty's support team</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Gourmet Concierge</h3>
+        <p>Our team is available 24/7 to assist with bespoke orders, bulk delivery, or product requests.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="bx bx-map"></i>
+            <div class="contact-item-text">
+              <h4>Flagship Store</h4>
+              <p>77 Orchard Boulevard, Green Valley</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="bx bx-phone"></i>
+            <div class="contact-item-text">
+              <h4>Concierge Hotlines</h4>
+              <p>+1 (800) 555-BOUNTY (Hours: 6 AM - 10 PM)</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="bx bx-envelope"></i>
+            <div class="contact-item-text">
+              <h4>Email Enquiries</h4>
+              <p>concierge@bountygourmet.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-container">
+        <h3>Send a Message</h3>
+        <form class="contact-form" id="contact-form">
+          <div class="contact-form-group">
+            <label for="contact-name">Full Name</label>
+            <input type="text" id="contact-name" placeholder="E.g. Jane Doe" required>
+          </div>
+          <div class="contact-form-group">
+            <label for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" placeholder="jane@example.com" required>
+          </div>
+          <div class="contact-form-group">
+            <label for="contact-message">Your Message</label>
+            <textarea id="contact-message" placeholder="How can we assist you today?" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Submit Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <strong>Bounty.</strong>
+    <span>© 2026 Bounty Gourmet. Fresh products. Simple shopping.</span>
+  </footer>
+
+  <div id="details-modal" class="modal">
+    <div class="modal-content details-modal-content">
+      <button type="button" class="close" id="close-details-btn" aria-label="Close details modal">&times;</button>
+      <div class="details-header-layout">
+        <div class="details-img-container">
+          <img src="" alt="" id="details-img">
+        </div>
+        <div class="details-main-info">
+          <h2 id="details-title">Product Name</h2>
+          <p id="details-desc" class="details-desc">Product description goes here.</p>
+          <div class="details-price-badge" id="details-price">₹0</div>
+        </div>
+      </div>
+
+      <div class="details-grid-layout">
+        <div class="details-column">
+          <h3>Nutritional Facts & Minerals</h3>
+          <table class="nutrition-table">
+            <tr>
+              <td>Protein</td>
+              <td id="details-protein">-</td>
+            </tr>
+            <tr>
+              <td>Key Minerals</td>
+              <td id="details-minerals">-</td>
+            </tr>
+          </table>
+        </div>
+        
+        <div class="details-column">
+          <h3>Benefits & Guidelines</h3>
+          <div class="benefits-split">
+            <div>
+              <h4 style="font-size:0.85rem; font-weight:800; color:var(--accent); margin-bottom:6px;">PROS</h4>
+              <ul class="details-list pros-list" id="details-pros"></ul>
+            </div>
+            <div style="margin-top:16px;">
+              <h4 style="font-size:0.85rem; font-weight:800; color:var(--text-muted); margin-bottom:6px;">CONS</h4>
+              <ul class="details-list cons-list" id="details-cons"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="login-modal" class="modal">
     <form class="modal-content" method="post">
-      <button type="button" class="close" onclick="document.getElementById('id01').style.display='none'">&times;</button>
-      <div class="imgcontainer"><img src="photo/Kath.jpg" alt="User avatar" class="avatar"></div>
+      <button type="button" class="close" id="close-login-btn" aria-label="Close modal">&times;</button>
+      <div class="imgcontainer"><img src="photo/user_avatar_default.jpg" alt="User avatar" class="avatar"></div>
       <div class="Container"><label for="uname">Username</label><input type="text" id="uname" placeholder="Enter username" name="uname" required><label for="psw">Password</label><input type="password" id="psw" placeholder="Enter password" name="psw" required><button type="submit">Login</button></div>
     </form>
   </div>
 
-  <script src="app.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/slideshow.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/details.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
