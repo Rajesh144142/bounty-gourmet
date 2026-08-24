@@ -1,626 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, user-scalable=no">
-  <title>shop-sellingWebsite</title>
-
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LogoMart | Modern Grocery Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-  <section class="one">
-    <header>
-      <!--NAV TOP 1ST PART-->
-      <div class="navTop">
-        <div class="websiteName">
-          <h1>LogoMart</h1>
-        </div>
-
-        <div class="searchbar"><input type="text" placeholder="search...." class="searchInput"></div>
-        <div class="icons">
-          <a href="javascript:void(0);" class="fa fa-bars" onclick="myFunction()"></a>
-          <a href="#" class="fa fa-shopping-cart" id="cart-icon"></a>
-
-          <a href="#" onclick="document.getElementById('id01').style.display='block'" class="fa fa-user"></a>
-        </div>
-        <div class="cartp">
-          <div class="cart-title">
-            Your Cart
-          </div>
-          <!--........................Content.....................-->
-          <div class="cart-contentp">
-
-          </div>
-          <div class="totalp">
-            <div class="total-tittlep">Total</div>
-            <div class="total-pricep">$0</div>
-          </div>
-          <!----------BUY BUTTON------------------------------------->
-          <button type="button" class="btn-buyp">Buy Now</button>
-          <!----------------------------Cart Close--------------------->
-          <i class="bx bx-x" id="close-cartp"></i>
-        </div>
-      </div>
-      <!--NAV TOP 1ST PART ENDS-->
-      <!--NAV TOP 2nd PART-->
-      <div class="topnav" id="myTopnav">
-        <a href="#">HOME</a>
-
-
-        <div class="dropdown">
-          <button class="dropbtn"> CATEGORIES
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#shop-content11">FRUITS</a>
-            <a href="#shop-content22"> VEGITABLES</a>
-            <a href="#shop-content33">FISH&MEAT</a>
-            <a href="#shop-content44">BEVERAGES</a>
-            <a href="#shop-content44">SNACKS</a>
-          </div>
-        </div>
-        <a href="#reviewtittle">REVIEW</a>
-        
-        <a href="#contact">CONTACT</a>
-
-      </div>
-      <!--NAV TOP 2nd PART ENDS-->
-    </header>
-  </section>
-  <section class="slide">
-    <div class="slideshow-container">
-
-      <div class="mySlides fade">
-
-        <img src="photo/one.jpg" style="width:100%">
-
-      </div>
-
-      <div class="mySlides fade">
-
-        <img src="photo/two.jpg" style="width:100%">
-
-      </div>
-
-      <div class="mySlides fade">
-
-        <img src="photo/three.jpg" style="width:100%">
-
-      </div>
-
-
-    </div>
-    <br>
-
-  </section>
-
-  <section class="login">
-    <div id="id01" class="modal">
-
-      <form class="modal-content animate" method="post">
-        <div class="imgcontainer">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
-          <img src="photo/Kath.jpg" alt="Avatar" class="avatar">
-        </div>
-
-        <div class="Container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
-
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-
-          <button type="submit">Login</button>
-          <label>
-
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-
-            <span class="psw">Forgot <a href="#">password?</a></span>
-          </label>
-
-        </div>
-
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" class="SignUp">Sign Up</button>
-
-        </div>
-
-      </form>
-    </div>
-
-  </section>
-
-
-  <section class="quick">
-    <div class="quick-search">
-      <div class="sec1">
-        Quick Search
-      </div>
-      <a href="#shop-content11">
-        <div class="sec">
-          Apples
-        </div>
-      </a>
-      <a href="#shop-content44">
-        <div class="sec">
-          Chocolates
-        </div>
-      </a>
-      <a href="#shop-content44">
-        <div class="sec">
-          Noodles
-        </div>
-      </a>
-      <a href="#shop-content44">
-        <div class="sec">
-          Coc
-        </div>
-      </a>
-
-    </div>
-  </section>
-
-  <div class="Newcata">OUR PRODUCTS</div>
-  <section class="carts" >
-
-    <div class="section1">
-      <hr>
-      <div class="section-title FRUITS" id="shop-content11">
-        FRESH FRUITS
-      </div>
-      <div class="shop-content1" id="shop-content1">
-
-        <!-- box 2-->
-        <div class="product-box">
-          <img src="photo/orange.jpg" alt="" class="product-img"> <h2 class="product-title">ORANGES</h2>
-          <span class="price">₹50</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <!-- box 3-->
-        <div class="product-box">
-          <img src="photo/apple.jpg" alt="" class="product-img"> <h2 class="product-title">APPLES</h2>
-          <span class="price">₹50</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <!--box 4-->
-        <div class="product-box">
-          <img src="photo/banana.jpg" alt="" class="product-img"> <h2 class="product-title">BANANAS</h2>
-          <span class="price">₹30</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <!--box 5-->
-        <div class="product-box">
-          <img src="photo/mango.jpg" alt="" class="product-img"> <h2 class="product-title">MANGOES</h2>
-          <span class="price">₹40</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <div class="product-box">
-          <img src="photo/graps.jpg" alt="" class="product-img"> <h2 class="product-title">GRAPS</h2>
-          <span class="price">₹90</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <div class="product-box">
-          <img src="photo/goava.jpg" alt="" class="product-img"> <h2 class="product-title">GUAVAS</h2>
-          <span class="price">₹20</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-
-        <div class="product-box">
-          <img src="photo/watermelon - Copy.jpg" alt="" class="product-img"> <h2 class="product-title">WATERMELON</h2>
-          <span class="price">₹70</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <div class="product-box">
-          <img src="photo/lichi.jpg" alt="" class="product-img"> <h2 class="product-title">LITCHIS</h2>
-          <span class="price">₹90</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <div class="product-box">
-          <img src="photo/anar-500x500.png" alt="" class="product-img"> <h2 class="product-title">ANAR</h2>
-          <span class="price">₹20</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-
-
-
-
-      </div>
-      <div class="button">
-        <a class="prev1" onclick="prev1()"><i class="fa fa-long-arrow-left"></i></a>
-        <a class="next1" onclick="next1()"><i class="fa fa-long-arrow-right"></i></a>
-      </div>
-
-    </div>
-    <div class="section2">
-      <hr>
-      <div class="section-title" id="shop-content22">
-        FRESH VEGITABLES
-      </div>
-      <div class="shop-content2" id="shop-content2">
-        <!--box 1-->
-        <div class="product-box">
-          <img src="photo/carrot.jpg" alt="" class="product-img"> <h2 class="product-title">CARROTS</h2>
-          <span class="price">₹5</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <!-- box 2-->
-        <div class="product-box">
-          <img src="photo/potato.jpg" alt="" class="product-img"> <h2 class="product-title">POTATO</h2>
-          <span class="price">₹10</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <div class="product-box">
-          <img src="photo/garlic.jpg" alt="" class="product-img"> <h2 class="product-title">GARLIC</h2>
-          <span class="price">₹30</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <div class="product-box">
-          <img src="photo/onion.jpg" alt="" class="product-img"> <h2 class="product-title">ONIONS</h2>
-          <span class="price">₹75</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <div class="product-box">
-          <img src="photo/ginger.jpg" alt="" class="product-img"> <h2 class="product-title">GINGERS</h2>
-          <span class="price">₹50</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <!-- box 3-->
-    
-        <!--box 4-->
-        <div class="product-box">
-          <img src="photo/tomato.jpg" alt="" class="product-img"> <h2 class="product-title">TOMATOES</h2>
-          <span class="price">₹20</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <!--box 5-->
-        <div class="product-box">
-          <img src="photo/Capsicum.jpg" alt="" class="product-img"> <h2 class="product-title">CAPSICUMS</h2>
-          <span class="price">₹13</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-       
-        <!-- box 7-->
-
-
-
-
-
-
-
-      </div>
-      <div class="button">
-        <a class="prev2" onclick="prev2()"><i class="fa fa-long-arrow-left"></i></a>
-        <a class="next2" onclick="next2()"><i class="fa fa-long-arrow-right"></i></a>
-      </div>
-    </div>
-    <div class="section3">
-      <hr>
-      <div class="section-title " id="shop-content33">
-        FISH & MEAT & DAIRY
-      </div>
-      <div class="shop-content3" id="shop-content3">
-        <!--box 1-->
-        <div class="product-box">
-          <img src="photo/katla.jpg" alt="" class="product-img"> <h2 class="product-title">KATLA</h2>
-          <span class="price">₹105</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <!-- box 2-->
-        <div class="product-box">
-          <img src="photo/Hilsa.jpg" alt="" class="product-img"> <h2 class="product-title">HILSHA</h2>
-          <span class="price">₹1000</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <div class="product-box">
-          <img src="photo/shrimp.jpg" alt="" class="product-img"> <h2 class="product-title">SHRIMP</h2>
-          <span class="price">₹95</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <div class="product-box">
-          <img src="photo/rui-mach.jpg" alt="" class="product-img"> <h2 class="product-title">ROHU</h2>
-          <span class="price">₹100</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <div class="product-box">
-          <img src="photo/goat-meat.jpg" alt="" class="product-img"> <h2 class="product-title">GOAT-MEAT</h2>
-          <span class="price">₹550</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <!-- box 3-->
-        <div class="product-box">
-          <img src="photo/fresh-chicken-meat.jpg" alt="" class="product-img"> <h2 class="product-title">CHICKEN-MEAT</h2>
-          <span class="price">₹250</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <!--box 4-->
-        <div class="product-box">
-          <img src="photo/Classic-Egg.jpg" alt="" class="product-img"> <h2 class="product-title">EGGS</h2>
-          <span class="price">₹50</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <!--box 5-->
-        <div class="product-box">
-          <img src="photo/milk.jpg" alt="" class="product-img"> <h2 class="product-title">MILK</h2>
-          <span class="price">$20</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <!--box 6-->
-        <div class="product-box">
-          <img src="photo/panner.jpg" alt="" class="product-img"> <h2 class="product-title">PANER</h2>
-          <span class="price">₹100</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <!-- box 7-->
-
-
-
-
-
-
-
-      </div>
-      <div class="button">
-        <a class="prev3" onclick="prev3()"><i class="fa fa-long-arrow-left"></i></a>
-        <a class="next3" onclick="next3()"><i class="fa fa-long-arrow-right"></i></a>
+  <header class="site-header">
+    <div class="header-main">
+      <a href="#home" class="brand" aria-label="LogoMart home">LogoMart<span>.</span></a>
+      <div class="header-actions">
+        <label class="search-box" for="product-search">
+          <i class="bx bx-search"></i>
+          <input id="product-search" class="searchInput" type="search" placeholder="Search products" autocomplete="off">
+        </label>
+        <button class="icon-button theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+          <i class="bx bx-moon"></i>
+        </button>
+        <button class="icon-button cart-button" type="button" id="cart-icon" aria-label="Open cart">
+          <i class="bx bx-shopping-bag"></i>
+          <span class="cart-count">0</span>
+        </button>
+        <button class="icon-button user-button" type="button" onclick="document.getElementById('id01').style.display='block'" aria-label="Open account">
+          <i class="bx bx-user"></i>
+        </button>
+        <button class="icon-button menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <i class="bx bx-menu"></i>
+        </button>
       </div>
     </div>
 
-    <div class="section4" id="shop-content44">
-      <hr>
-      <div class="section-title ">
-        BEVERAGES & SNAKS
+    <nav class="topnav" id="myTopnav" aria-label="Main navigation">
+      <a href="#home" class="nav-link active">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn" type="button">Categories <i class="bx bx-chevron-down"></i></button>
+        <div class="dropdown-content">
+          <a href="#fruits">Fruits</a>
+          <a href="#vegetables">Vegetables</a>
+          <a href="#protein">Fish & Meat</a>
+          <a href="#beverages">Beverages</a>
+          <a href="#beverages">Snacks</a>
+        </div>
       </div>
-      <div class="shop-content2" id="shop-content4">
-        <!--box 1-->
-        <div class="product-box">
-          <img src="photo/COC.jpg" alt="" class="product-img"> <h2 class="product-title">coca cola</h2>
-          <span class="price">₹95</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <!-- box 2-->
-      
-        <div class="product-box">
-          <img src="photo/kurkure.jpg" alt="" class="product-img"> <h2 class="product-title">KURKURE</h2>
-          <span class="price">₹50</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <div class="product-box">
-          <img src="photo/act2.jpg" alt="" class="product-img"> <h2 class="product-title">ACT II POPCORN</h2>
-          <span class="price">₹35</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <div class="product-box">
-          <img src="photo/maggi.jpg" alt="" class="product-img"> <h2 class="product-title">NOODLES</h2>
-          <span class="price">₹50</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <!-- box 3-->
-        <div class="product-box">
-          <img src="photo/choclet.jpg" alt="" class="product-img"> <h2 class="product-title">CHOCLET</h2>
-          <span class="price">₹50</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <!--box 4-->
-        <div class="product-box">
-          <img src="photo/Bhujia.jpg" alt="" class="product-img"> <h2 class="product-title">HALDIRAM BHUJIA</h2>
-          <span class="price">₹20</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <!--box 5-->
-        <div class="product-box">
-          <img src="photo/cup cake.jpg" alt="" class="product-img"> <h2 class="product-title">CUP CAKES</h2>
-          <span class="price">₹40</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <!--box 6-->
-        <div class="product-box">
-          <img src="photo/COFFEE.jpg" alt="" class="product-img"> <h2 class="product-title">COFFEE</h2>
-          <span class="price">₹150</span>
-          <i class='bx bx-shopping-bag add-cart'></i>
-        </div>
-        <!-- box 7-->
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-
-
-
-
-
-
+  <main>
+    <section class="slide" id="home">
+      <div class="slideshow-container">
+        <div class="mySlides fade"><img src="photo/one.jpg" alt="Fresh groceries"></div>
+        <div class="mySlides fade"><img src="photo/two.jpg" alt="Quality products"></div>
+        <div class="mySlides fade"><img src="photo/three.jpg" alt="Shop online"></div>
       </div>
-      <div class="button">
-        <a class="prev4" onclick="prev4()"><i class="fa fa-long-arrow-left"></i></a>
-        <a class="next4" onclick="next4()"><i class="fa fa-long-arrow-right"></i></a>
+    </section>
+
+    <section class="quick" aria-label="Quick search">
+      <div class="quick-search">
+        <span class="quick-label">Quick search</span>
+        <a href="#fruits" class="quick-chip">Apples</a>
+        <a href="#beverages" class="quick-chip">Chocolates</a>
+        <a href="#beverages" class="quick-chip">Noodles</a>
+        <a href="#beverages" class="quick-chip">Beverages</a>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <section class="products-section" aria-labelledby="products-heading">
+      <div class="section-heading">
+        <p>Fresh selections</p>
+        <h1 id="products-heading">Our Products</h1>
+      </div>
 
+      <section class="product-category" id="fruits">
+        <div class="category-heading"><h2>Fresh Fruits</h2><div class="category-actions"><button type="button" class="prev1" onclick="prev1()" aria-label="Previous fruits"><i class="bx bx-left-arrow-alt"></i></button><button type="button" class="next1" onclick="next1()" aria-label="Next fruits"><i class="bx bx-right-arrow-alt"></i></button></div></div>
+        <div class="product-grid shop-content1" id="shop-content1">
+          <article class="product-box"><img src="photo/orange.jpg" alt="Oranges" class="product-img"><h3 class="product-title">Oranges</h3><span class="price">₹50</span><button class="add-cart" type="button" aria-label="Add Oranges to cart"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><img src="photo/apple.jpg" alt="Apples" class="product-img"><h3 class="product-title">Apples</h3><span class="price">₹50</span><button class="add-cart" type="button" aria-label="Add Apples to cart"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><img src="photo/banana.jpg" alt="Bananas" class="product-img"><h3 class="product-title">Bananas</h3><span class="price">₹30</span><button class="add-cart" type="button" aria-label="Add Bananas to cart"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><img src="photo/mango.jpg" alt="Mangoes" class="product-img"><h3 class="product-title">Mangoes</h3><span class="price">₹40</span><button class="add-cart" type="button" aria-label="Add Mangoes to cart"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><img src="photo/graps.jpg" alt="Grapes" class="product-img"><h3 class="product-title">Grapes</h3><span class="price">₹90</span><button class="add-cart" type="button" aria-label="Add Grapes to cart"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><img src="photo/goava.jpg" alt="Guavas" class="product-img"><h3 class="product-title">Guavas</h3><span class="price">₹20</span><button class="add-cart" type="button" aria-label="Add Guavas to cart"><i class="bx bx-plus"></i></button></article>
+        </div>
+      </section>
 
+      <section class="product-category" id="vegetables">
+        <div class="category-heading"><h2>Fresh Vegetables</h2><div class="category-actions"><button type="button" class="prev2" onclick="prev2()"><i class="bx bx-left-arrow-alt"></i></button><button type="button" class="next2" onclick="next2()"><i class="bx bx-right-arrow-alt"></i></button></div></div>
+        <div class="product-grid shop-content2" id="shop-content2">
+          <article class="product-box"><img src="photo/carrot.jpg" alt="Carrots" class="product-img"><h3 class="product-title">Carrots</h3><span class="price">₹5</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><img src="photo/potato.jpg" alt="Potato" class="product-img"><h3 class="product-title">Potato</h3><span class="price">₹10</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><img src="photo/garlic.jpg" alt="Garlic" class="product-img"><h3 class="product-title">Garlic</h3><span class="price">₹30</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><img src="photo/onion.jpg" alt="Onions" class="product-img"><h3 class="product-title">Onions</h3><span class="price">₹75</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><img src="photo/ginger.jpg" alt="Ginger" class="product-img"><h3 class="product-title">Ginger</h3><span class="price">₹50</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><img src="photo/tomato.jpg" alt="Tomatoes" class="product-img"><h3 class="product-title">Tomatoes</h3><span class="price">₹20</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+        </div>
+      </section>
 
+      <section class="product-category" id="protein">
+        <div class="category-heading"><h2>Fish, Meat & Dairy</h2><div class="category-actions"><button type="button" class="prev3" onclick="prev3()"><i class="bx bx-left-arrow-alt"></i></button><button type="button" class="next3" onclick="next3()"><i class="bx bx-right-arrow-alt"></i></button></div></div>
+        <div class="product-grid shop-content3" id="shop-content3">
+          <article class="product-box"><img src="photo/katla.jpg" alt="Katla" class="product-img"><h3 class="product-title">Katla</h3><span class="price">₹105</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><img src="photo/Hilsa.jpg" alt="Hilsha" class="product-img"><h3 class="product-title">Hilsha</h3><span class="price">₹1000</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><img src="photo/shrimp.jpg" alt="Shrimp" class="product-img"><h3 class="product-title">Shrimp</h3><span class="price">₹95</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><img src="photo/rui-mach.jpg" alt="Rohu" class="product-img"><h3 class="product-title">Rohu</h3><span class="price">₹100</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><img src="photo/goat-meat.jpg" alt="Goat meat" class="product-img"><h3 class="product-title">Goat Meat</h3><span class="price">₹550</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><img src="photo/fresh-chicken-meat.jpg" alt="Chicken" class="product-img"><h3 class="product-title">Chicken</h3><span class="price">₹250</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+        </div>
+      </section>
 
+      <section class="product-category" id="beverages">
+        <div class="category-heading"><h2>Beverages & Snacks</h2><div class="category-actions"><button type="button" class="prev4" onclick="prev4()"><i class="bx bx-left-arrow-alt"></i></button><button type="button" class="next4" onclick="next4()"><i class="bx bx-right-arrow-alt"></i></button></div></div>
+        <div class="product-grid shop-content4" id="shop-content4">
+          <article class="product-box"><img src="photo/coc.jpg" alt="Coca Cola" class="product-img"><h3 class="product-title">Coca Cola</h3><span class="price">₹40</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><img src="photo/limca.jpg" alt="Limca" class="product-img"><h3 class="product-title">Limca</h3><span class="price">₹30</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><img src="photo/pepsi.jpg" alt="Pepsi" class="product-img"><h3 class="product-title">Pepsi</h3><span class="price">₹40</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+          <article class="product-box"><img src="photo/maggi.jpg" alt="Noodles" class="product-img"><h3 class="product-title">Noodles</h3><span class="price">₹30</span><button class="add-cart" type="button"><i class="bx bx-plus"></i></button></article>
+        </div>
+      </section>
+    </section>
+  </main>
 
+  <aside class="cartp" aria-label="Shopping cart">
+    <div class="cart-header"><h2 class="cart-title">Your Cart</h2><button type="button" id="close-cartp" aria-label="Close cart"><i class="bx bx-x"></i></button></div>
+    <div class="cart-contentp"></div>
+    <div class="totalp"><span>Total</span><span class="total-pricep">₹0</span></div>
+    <button type="button" class="btn-buyp">Checkout</button>
+  </aside>
 
+  <section class="reviews" id="reviews"><h2>Customer Reviews</h2><p>Quality products, delivered with care.</p></section>
+  <footer id="contact"><strong>LogoMart.</strong><span>Fresh products. Simple shopping.</span></footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="reviewtittle" id="reviewtittle">
-    <h1>Review</h1>
-
-    <div class="star">
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star-half-full"></span>
-    </div>
-    <h5>All Reviews 293</h5>
+  <div id="id01" class="modal">
+    <form class="modal-content" method="post">
+      <button type="button" class="close" onclick="document.getElementById('id01').style.display='none'">&times;</button>
+      <div class="imgcontainer"><img src="photo/Kath.jpg" alt="User avatar" class="avatar"></div>
+      <div class="Container"><label for="uname">Username</label><input type="text" id="uname" placeholder="Enter username" name="uname" required><label for="psw">Password</label><input type="password" id="psw" placeholder="Enter password" name="psw" required><button type="submit">Login</button></div>
+    </form>
   </div>
-  <section class="review">
 
-    <div class="number"><img src="photo/avater1.jpg">
-      <div class="name"><span>
-          Mrs. Katherina langford</span></div>
-      <div class="star">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-      </div>
-      <div class="write">
-        <p>“Products were nicely and robustly packaged. I would definitely shop from them again.”</p>
-      </div>
-    </div>
-
-    <div class="number"><img src="photo/avater2.jpg">
-      <div class="name"><span>Mr.Rober Downey Jr</span></div>
-      <div class="star">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-      </div>
-      <div class="write">
-        <p>“Fresh products, good quality and time .Keep doing same quality.thanks!”</p>
-      </div>
-    </div>
-    </div>
-    <div class="number "><img src="photo/avater4.jpg">
-      <div class="name" style="padding-left:3rem;"><span>Mrs.Emma Stone</span>
-
-      </div>
-      <div class="star">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <i class="fa fa-star-o"></i>
-      </div>
-      <div class="write">
-        <p>“Great experience and timely delivered.Good service”
-        </p>
-
-      </div>
-
-
-    </div>
-    <div class="number "><img src="photo/avater3.jpg">
-      <div class="name"><span>Mrs.Josephine Langford</span>
-
-      </div>
-      <div class="star">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <i class="fa fa-star-half-full"></i>
-      </div>
-      <div class="write">
-        <p>“Hey it's reminded me of mangoes I ate in India during my childhood.”
-        </p>
-
-      </div>
-
-
-    </div>
-  </section>
-  
-  <section class="contact"id="contact">
-    <div class="TopSelledproduct">
-      <div class="topselled">
-        Popular Products
-      </div>
-      <div class="productsSelled">
-        <ul>Vegetables</ul>
-        <ul> Beverages </ul>
-       
-        <ul> Meat </ul>
-        <ul> Fruits  </ul>
-        <ul> Fish</ul>
-        <ul> Snacks & Branded Foods </ul>
-        <ul> Dairy & Bakery </ul>
-      </div>
-    </div>
-    <div class="followUS">
-      <div class="followTittle">
-        Follow Us
-      </div>
-      <div class="socialmedia">
-        <a> <i class="fa fa-facebook"></i> </a>
-        <a> <i class="fa fa-instagram"></i></a>
-        <a> <i class="fa fa-linkedin"></i></a>
-        <a> <i class="fa fa-twitter"></i></a>
-        <a> <i class="fa fa-youtube"></i></a>
-      </div>
-    </div>
-
-    <div class="contactUS">
-      <div class="vl"></div>
-      <div class="ContactTittleMain">
-        <div class="ContactTittle">
-          Contact Us
-        </div>
-        <div class="cotactitems">
-          <ul>WhatsApp us : 70003 70003</ul>
-          <ul>call Us : 1800 890 1222</ul>
-          <ul>8:00 AM to 8:00 PM, 365 days</ul>
-
-          <ul> Please note that you are accessing the BETA Version of www.rjStores.com</ul>
-
-          <ul> Should you encounter any bugs, glitches, lack of functionality, delayed deliveries
-            , billing errors or other problems on the beta website,
-            please Let Us Know,</ul>
-            <ul>
-              <button class="contactbtn" onclick="document.getElementById('about-container').style.display='block'">CLick Here</button></ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  <hr>
-  <span class="nothing">
-
-  </span>
-  <div class="about-container" id="about-container">  
-         
-  <form>
-        <h3>GET IN TOUCH <button class="closebtn" type="button" onclick="document.getElementById('about-container').style.display='none'">&times;</button></h3>
-       
-    <input type="text" id="name"placeholder="Your Name" required>
-    <input type="email" id="email"placeholder="Email id" required>
-    <input type="text" id="phone"placeholder="Phone no." required>
-    <textarea id="message" crows="4"placeholder="How can we help you.."></textarea>
-  
-     
-    <button class="send" type="submit">Send</button>
-    
-  
-
-   
-      
-   
-</form>
-
-</div>
   <script src="app.js"></script>
 </body>
-
 </html>
